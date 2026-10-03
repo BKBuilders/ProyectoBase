@@ -90,3 +90,35 @@ FLUJO DE USUARIO
 9- Registro compartido (Aplicación): Confirma el cierre (No se puede alterar)
 
 El cierre solo se sella cuando ambas partes aprueban la propuesta. Si después aparece un error, se corrige con un movimiento nuevo y no editando el anterior.
+
+
+ALCANCE DEL MVP
+
+Objetivo: que Vibra Luz pueda entregar velas a un vendedor, recibir devoluciones y liquidar comisiones, con un registro que ambas partes puedan verificar. Todo en una sola aplicación.
+
+Funcionalidad central
+- Acceso y usuarios: Ingreso con dos roles (emprendimiento y vendedor) y creación de vendedores.
+- Catálogo e inventario: Lista simple de velas (referencia, precio, comisión pactada) y existencias.
+- Entregas: Registro, aceptación o rechazo del vendedor y sello con ambas firmas (HU-01 y HU-02).
+- Devoluciones: Declaración y confirmación del emprendimiento al recibir (HU-03).
+- Saldo e historial: Unidades entregadas, devueltas y bajo responsabilidad del vendedor, con el estado de cada confirmación (transacción) (HU-04).
+- Liquidación: Cálculo de monto y comisión, aprobación de ambas partes y sello del cierre (HU-05).
+
+Funcionalidad deseable (fuera del MVP)
+- Ventas detalladas por cliente.
+- Transferencias entre vendedores.
+- Comisiones distintas por producto.
+- Pagos dentro de la red blockchain con contratos inteligentes. La liquidación se paga por los medios actuales (pse).
+- Notificaciones automáticas por WhatsApp o correo.
+- Reportes y analítica.
+- En el MVP basta una versión web que funcione bien en el celular.
+- Varios negocios en la misma aplicación y control avanzado de permisos.
+
+Por qué el recorte sigue entregando valor
+- Es usable de principio a fin. Cubre el flujo actual completo: inventario, entrega, venta, devolución, conciliación y liquidación.
+- Resuelve el problema central. La dificultad está en reconstruir qué recibió, devolvió y debe liquidar cada vendedor, y eso queda cubierto con confirmación de ambas partes.
+- Lo que se queda fuera mejora la experiencia, no el ciclo. Notificaciones, analítica o pagos automáticos hacen más cómodo el uso, pero no son necesarios para comprobar que la idea funciona.
+- Mantiene la propuesta de valor. La verificación sin depender del administrador sigue presente en cada entrega, devolución y cierre.
+- Permite aprender rápido. Con pocos vendedores reales se mide si prefieren este registro a los chats y las hojas de cálculo.
+- Blockchain solo para los eventos confirmados: entrega, devolución y cierre. Los datos de apoyo (catálogo, existencias, ventas reportadas) viven en la base de datos de la aplicación.
+
