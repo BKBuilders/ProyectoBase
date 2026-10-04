@@ -1,0 +1,262 @@
+# PRODUCT BLUEPRINT — VIBRA LUZ
+
+## 1. HISTORIAS DE USUARIO
+
+### HU-01 — Consultar y verificar historial de compras
+
+**Como comprador, quiero consultar un registro claro y comprobable de mis compras, para mantener mis cuentas organizadas y construir una reputación basada en mis transacciones.**
+
+**Criterios de aceptación:**
+- El comprador puede consultar su historial de compras.
+- Cada compra muestra producto, cantidad, fecha, vendedor e identificador único.
+- Se pueden distinguir compras confirmadas de compras pendientes.
+- Una compra confirmada no puede ser modificada ni eliminada.
+- El comprador puede verificar que la compra confirmada corresponde al registro asociado en Stellar.
+
+### HU-02 — Registrar y consultar historial de clientes
+
+**Como vendedor, quiero registrar y consultar un historial conjunto de mis transacciones con cada cliente, para conocer nuestra relación comercial y fortalecer la fidelización.**
+
+**Criterios de aceptación:**
+- El vendedor puede consultar el historial de transacciones de cada cliente.
+- Cada registro muestra producto, cantidad, fecha y estado.
+- Las partes involucradas pueden confirmar los movimientos correspondientes.
+- Se distinguen movimientos pendientes, confirmados y rechazados.
+- Los movimientos confirmados permanecen disponibles para consulta.
+
+### HU-03 — Consultar historial de devoluciones de un proveedor
+
+**Como empresa, quiero consultar cuántos productos han sido devueltos a cada proveedor y el historial de esas devoluciones, para evaluar su confiabilidad y tomar mejores decisiones de compra.**
+
+**Criterios de aceptación:**
+- La empresa puede consultar las devoluciones asociadas a cada proveedor.
+- Cada devolución muestra producto, cantidad, fecha y motivo cuando esté disponible.
+- Se identifica claramente el proveedor relacionado.
+- Las devoluciones confirmadas permanecen en el historial.
+- Se puede consultar la cantidad acumulada de productos devueltos por proveedor.
+
+### HU-04 — Consultar trazabilidad y procedencia de un producto
+
+**Como cliente, quiero consultar de dónde provienen los productos que compro y cómo fueron producidos, para conocer su procedencia y tener mayor confianza sobre su seguridad para el consumo.**
+
+**Criterios de aceptación:**
+- El cliente puede consultar el origen y procedencia del producto.
+- Se identifican los participantes relacionados con su producción y comercialización.
+- La información disponible permite conocer el recorrido registrado del producto.
+- Se distinguen datos registrados de información pendiente de completar.
+- Los registros de trazabilidad confirmados pueden verificarse mediante su identificador asociado en Stellar.
+
+### HU-05 — Consultar rendimiento y resultados del negocio
+
+**Como dueño de un negocio, quiero consultar el seguimiento, rendimiento y ganancias de mi empresa, para identificar claramente qué funciona y qué aspectos pueden mejorar.**
+
+**Criterios de aceptación:**
+- El dueño puede consultar ventas, devoluciones y resultados del negocio.
+- Puede visualizar el rendimiento por periodos.
+- Los resultados se calculan a partir de los movimientos registrados.
+- Se pueden identificar productos, proveedores o procesos con mejores y peores resultados.
+- La información permite apoyar decisiones de mejora del negocio.
+
+---
+
+# 2. PRIORIZACIÓN DE HISTORIAS
+
+La priorización considera el valor para el usuario, la importancia para el producto y la relevancia del uso de Stellar.
+
+### Prioridad 1 — HU-04
+**Consultar trazabilidad y procedencia de un producto.**
+
+Es una funcionalidad diferenciadora porque permite conocer el origen y recorrido de un producto y verificar la información registrada. Además, puede servir como base para las demás funcionalidades.
+
+### Prioridad 2 — HU-01
+**Consultar y verificar historial de compras.**
+
+Permite construir un registro organizado de las transacciones del comprador y aporta confianza mediante la verificación.
+
+### Prioridad 3 — HU-03
+**Consultar historial de devoluciones de un proveedor.**
+
+Permite evaluar la confiabilidad de los proveedores mediante información acumulada.
+
+### Prioridad 4 — HU-02
+**Registrar y consultar historial de clientes.**
+
+Ayuda al vendedor a conocer la relación comercial con sus clientes y fortalecer la fidelización.
+
+### Prioridad 5 — HU-05
+**Consultar rendimiento y resultados del negocio.**
+
+Se plantea como una funcionalidad posterior porque depende de contar con suficiente información registrada para generar análisis útiles.
+
+---
+
+# 3. PROPUESTA DE VALOR
+
+Vibra Luz es una plataforma que permite registrar, consultar y verificar información comercial relevante de compradores, clientes, vendedores, proveedores y productos, utilizando Stellar como una capa de confianza y verificación.
+
+Actualmente, parte de esta información puede encontrarse dispersa entre facturas, hojas de cálculo, conversaciones y registros internos. Esto dificulta comprobar el historial de las operaciones, conocer la procedencia de los productos y evaluar proveedores o resultados del negocio.
+
+Vibra Luz transforma esos registros dispersos en información organizada, compartida y verificable.
+
+El cliente puede consultar la procedencia de un producto; el comprador, su historial; el vendedor, la relación con sus clientes; la empresa, las devoluciones por proveedor; y el dueño del negocio, el rendimiento de sus operaciones.
+
+---
+
+# 4. FLUJO DE USUARIO
+
+1. El usuario registra un producto, compra, cliente, proveedor o movimiento comercial.
+2. El sistema genera un registro y un identificador para la operación.
+3. Cuando intervienen varias partes, el movimiento puede requerir confirmación.
+4. Las operaciones relevantes se vinculan con un registro verificable en Stellar.
+5. El usuario consulta la información correspondiente a su rol.
+6. El usuario puede verificar el registro mediante el identificador asociado a Stellar.
+7. La información acumulada permite construir historiales, evaluar proveedores y analizar el rendimiento del negocio.
+
+---
+
+# 5. ALCANCE DEL MVP
+
+## Objetivo
+
+Construir una primera versión funcional de Vibra Luz que permita registrar, consultar y verificar información comercial relevante y validar la propuesta de transparencia.
+
+## Incluye
+
+- Usuarios y roles.
+- Registro de productos y procedencia.
+- Historial de compras.
+- Historial de clientes.
+- Historial de devoluciones por proveedor.
+- Verificación mediante Stellar.
+- Información básica de rendimiento del negocio.
+
+## Fuera del MVP
+
+- Aplicación móvil nativa.
+- Analítica avanzada o predictiva.
+- Pagos automatizados.
+- Integraciones contables.
+- Notificaciones por WhatsApp o correo.
+- Cuentas multiempresa avanzadas.
+- Programas de fidelización avanzados.
+- Dashboards avanzados.
+
+## Justificación
+
+Se mantiene el núcleo de la propuesta y se dejan para etapas posteriores las funciones que mejoran la experiencia o permiten análisis más avanzados, pero que no son indispensables para validar la idea.
+
+---
+
+# 6. LEAN CANVAS
+
+| Elemento | Descripción |
+|---|---|
+| **Problema** | Información comercial dispersa; dificultad para verificar historiales; poca transparencia sobre la procedencia de productos; dificultad para evaluar proveedores y rendimiento. |
+| **Segmentos de clientes** | Compradores, clientes, vendedores, empresas y dueños de pequeños negocios. |
+| **Propuesta única de valor** | Información comercial organizada y verificable para generar confianza. |
+| **Solución** | Plataforma para registrar, consultar y verificar compras, productos, clientes, proveedores y movimientos comerciales. |
+| **Canales** | Plataforma web, redes sociales y alianzas. |
+| **Métricas clave** | Usuarios registrados, productos registrados, movimientos registrados, consultas de trazabilidad, registros verificados y usuarios activos. |
+| **Ventaja diferencial** | Historial verificable que reduce la dependencia de registros controlados exclusivamente por una de las partes. |
+| **Estructura de costos** | Desarrollo, infraestructura, mantenimiento, almacenamiento e integración con Stellar. |
+| **Fuentes de ingresos** | Suscripciones, planes premium, servicios de trazabilidad e integraciones empresariales. |
+
+---
+
+# 7. BACKLOG PRIORIZADO — KANBAN
+
+El backlog se organiza en las siguientes columnas:
+
+**Backlog → Por hacer → En progreso → En revisión → Completado**
+
+### HU-04 — Alta prioridad
+**Consultar trazabilidad y procedencia de un producto.**
+
+Estado inicial: **Backlog**
+
+### HU-01 — Alta prioridad
+**Consultar y verificar historial de compras.**
+
+Estado inicial: **Backlog**
+
+### HU-03 — Prioridad media
+**Consultar historial de devoluciones de un proveedor.**
+
+Estado inicial: **Backlog**
+
+### HU-02 — Prioridad media
+**Registrar y consultar historial de clientes.**
+
+Estado inicial: **Backlog**
+
+### HU-05 — Prioridad posterior
+**Consultar rendimiento y resultados del negocio.**
+
+Estado inicial: **Backlog**
+
+Cada tarjeta del Kanban debe contener:
+
+- Historia de usuario.
+- Prioridad.
+- Criterios de aceptación.
+- Estado.
+
+El tablero se gestionará mediante GitHub Projects dentro del repositorio del grupo.
+
+---
+
+# 8. ARQUITECTURA INICIAL
+
+## Flujo general
+
+**Interfaz de usuario → Backend → Base de datos**
+
+El Backend también se comunica con Stellar para respaldar y verificar las operaciones seleccionadas.
+
+### Interfaz
+
+Permite al usuario registrar y consultar información según su rol.
+
+### Backend
+
+Valida permisos, datos y reglas de negocio, y coordina las operaciones con la base de datos y Stellar.
+
+### Base de datos
+
+Almacena la información operativa necesaria para realizar consultas rápidas y construir historiales.
+
+### Stellar
+
+Funciona como capa de confianza y verificación para las operaciones que requieren un registro comprobable.
+
+### Identificador
+
+Cada operación respaldada puede relacionarse con un identificador de la transacción o registro correspondiente en Stellar.
+
+---
+
+# 9. USO DE STELLAR Y JUSTIFICACIÓN
+
+## Propósito
+
+Stellar se utilizará para respaldar los registros que necesiten mayor confianza, integridad y posibilidad de verificación.
+
+## Problema que aborda
+
+Evita que los registros importantes dependan exclusivamente de una única parte que pueda modificarlos unilateralmente sin que exista una referencia externa verificable.
+
+## Componentes propuestos
+
+- **Red Stellar:** infraestructura descentralizada.
+- **Cuentas:** identificación de los participantes.
+- **Transacciones:** respaldo verificable de operaciones.
+- **Firmas:** autorización de las operaciones.
+- **Identificador de transacción:** permite relacionar el registro de la aplicación con su respaldo en Stellar.
+
+## Decisión de arquitectura
+
+No se almacenará toda la información de la aplicación directamente en blockchain. La base de datos conservará la información operativa y Stellar se utilizará donde la verificación y la integridad aporten un valor real.
+
+## Resultado esperado
+
+De esta manera, Stellar no se utiliza únicamente como elemento tecnológico, sino como una parte funcional de la propuesta de Vibra Luz: permitir que determinados registros comerciales puedan ser comprobados.
